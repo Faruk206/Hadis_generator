@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" href="Icon.png">
+    <title>Hadisi generator</title>
+  <head>
+      <style>
+          body{
+              background-image: url('https://dakwahislami.net/wp-content/uploads/2021/07/3716769cc89264ab9618cb2a6dadd525-6.jpg');
+            
+          }
+
+          #kontejner{
+              background-color: #267e2e;
+              border: rgb(255, 255, 255) 5px double;
+              height: 350px;
+              width: 750px;
+              margin-left: 550px;
+              margin-top: 100px;
+              color:cornsilk;
+              border-radius: 40px;
+          }
+
+          #D{
+              height: 40px;
+              width: 170px;
+              border:rgb(5, 61, 0) 5px solid;
+              background-color: rgb(255, 255, 255);
+              color: darkgreen;
+              position: static;
+              border-radius: 8px;
+              padding: 5px;
+          }
+
+          #naslov{
+             font-family: cursive;
+             font-size: 60px;
+             color: #196d20;
+             text-shadow:black 2px 2px;
+             margin-top: 150px;
+          }
+
+          #Hadisi{
+              border: black 1px solid;
+              height: 80px;
+              width: 600px;
+              background-color: rgb(252, 234, 221);
+              color:black; 
+              border-radius: 30px;
+              text-align: fixed;
+              display: table-cell;
+              vertical-align: middle;
+          }
+      </style>
+   
+    <body>
+<center> <h1 id="naslov"><i>Nasumični Hadis!</i></h1></center>
+        <div id="kontejner">
+            <center>
+                 <h1 style="font-size: 40px; font-family: sans-serif;">
+                    Hadis generator
+                </h1>
+                <h3><i>Kliknite na dugme i novi hadis će se pojaviti!</i></h3>
+               <div id="Hadisi">
+                <div id="H" style="font-size: 18px;">Prenosi se da je Poslanik, sallallahu ‘alejhi we sellem, molio Allaha, dž.š., sljedećim riječima:<b><i>“Molim te za bogobojaznost i strah od Tebe i javno i tajno”.</i></b></div>
+               </div>
+                <br>
+                <br>
+                <button id="D">Klikni za novi hadis!</button>
+           </center>
+        </div>
+    </body>
+  </head>
+  <script type="text/Javascript">
+         
+    var Dugme = document.getElementById("D");
+    var Hadis = document.getElementById("H");  
+    var Hadisi=
+    [
+        '“Pogledajte u one koji su niži od vas, a ne u one koji su viši od vas, to je najbolji način da izbjegnete omalovažavanje Allahove blagodati prema vama.”', 
+        '“Boj se Allaha gdje god bio, loše djelo poprati dobrim ono će ga obrisati i lijepo se prema ljudima ophodi”',
+        '“Nema ni jednog čovjeka koji izađe iz svoje kuće tražeći nauku, a da mu meleki ne pruže svoja krila zadovoljni sa onim što čini.”',
+    ];
+
+   Dugme.addEventListener("click", function(){
+       
+    var NasumicniHadis = Hadisi[Math.floor(Math.random() * Hadisi.length)];
+    Hadis.innerHTML = NasumicniHadis;
+   })
+
+  </script>
+</html>
